@@ -8,7 +8,8 @@ guiding principles:
 3. No import hierarchies / chains
 
 Every folder has an ```all.scss``` file that lists every SASS file in that folder.
-A folder at level N will import every folder at level N-1 via its ```all.scss``` file.
+A folder at level N will import every folder at level N-1 via the latter's
+```all.scss``` file.
 
 There are 3 directories:
 
@@ -18,9 +19,7 @@ There are 3 directories:
 
 Every file in ```modules/``` imports every file in ```base/```, essentially treating
 this dir as a single file. So from this point of view, every SASS module is the same
-in what it needs to know about other files.
-
-In the words of Abraham Lincoln, "It just works!"
+in what it needs to know about other files. Convention over configuration.
 
 ## License (MIT)
 

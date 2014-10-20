@@ -12,3 +12,25 @@
   @include respond-to($cols12) { width: 85%; }
   @include respond-to($iphone_landscape) { width: 90%; }
 }
+
+/*
+Some examples of classes for responsive breakpoints */
+.tablet-l > *[class^="col"] {
+  @include respond-to($ipad_landscape) {
+    float: none;
+    width: 100%;
+  }
+}
+.tablet-p > *[class^="col"] {
+  @include respond-to($ipad_portrait) {
+    float: none;
+    width: 100%;
+  }
+}
+.mobile-l > *[class^="col"] {
+  @include respond-to($iphone_landscape) {
+    float: none;
+    width: 100%;
+  }
+}
+

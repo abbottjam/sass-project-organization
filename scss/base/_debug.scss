@@ -1,6 +1,8 @@
 @import "viewports";
 
-div.debug {
+.debug { background: #ccc; }
+
+div.viewport {
   background: rgba(0,0,0, .5);
   width: 100%;
   position: fixed;
@@ -9,7 +11,7 @@ div.debug {
 
   display: none;
 }
-div.debug p {
+div.viewport p {
   text-align:  center;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   //margin: 0;
@@ -17,8 +19,8 @@ div.debug p {
 }
 .wrapper, .measure, .upper { border: 0px dotted #000; }
 
-@media screen and (min-width: $ipad_landscape) and (min-width: $desktop) { .debug p:after { content: "DESKTOP"; } }
-@media screen and (min-width: $ipad_portrait) and (max-width: $ipad_landscape) { .debug p:after { content: "IPAD LANDSCAPE"; } }
-@media screen and (min-width: $iphone_landscape) and (max-width: $ipad_portrait) { .debug p:after { content: "IPAD PORTRAIT"; } }
-@media screen and (min-width: $iphone_portrait) and (max-width: $iphone_landscape) { .debug p:after { content: "IPHONE LANDSCAPE"; } }
-@media screen and (max-width: $iphone_portrait) { .debug p:after { content: "IPHONE PORTRAIT"; } }
+@media screen and (min-width: $ipad_landscape) and (min-width: $desktop) { .viewport p:after { content: "DESKTOP"; } }
+@media screen and (min-width: $ipad_portrait) and (max-width: $ipad_landscape) { .viewport p:after { content: "IPAD LANDSCAPE"; } }
+@media screen and (min-width: $iphone_landscape) and (max-width: $ipad_portrait) { .viewport p:after { content: "IPAD PORTRAIT"; } }
+@media screen and (min-width: $iphone_portrait) and (max-width: $iphone_landscape) { .viewport p:after { content: "IPHONE LANDSCAPE"; } }
+@media screen and (max-width: $iphone_portrait) { .viewport p:after { content: "IPHONE PORTRAIT"; } }
